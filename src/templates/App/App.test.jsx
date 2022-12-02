@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import { renderTheme } from '../../styles/render-theme';
 import Home from './index';
 
 test('renders learn react link', () => {
-  render(<Home />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const { debug } = renderTheme(<Home />);
+  const headingContainer = screen.getByRole('heading', {
+    name: 'HELLOOO WORD!!!',
+  }).parentElement;
+  expect(headingContainer).toHaveStyle({
+    background: 'blue',
+  });
+  expect(headingContainer).toHaveStyleRule('background', 'blue');
 });
