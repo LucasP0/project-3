@@ -6,6 +6,9 @@ export default {
   args: {
     children: 'Não sei',
   },
+  argTypes: {
+    children: { type: 'string' },
+  },
 };
 
 export const Template = (args) => <Heading {...args} />;

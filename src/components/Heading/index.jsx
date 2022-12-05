@@ -1,3 +1,10 @@
-export const Heading = () => {
-  return <h1>Olá mundo</h1>;
+import P from 'prop-types';
+import * as Styled from './Styled';
+
+export const Heading = ({ children }) => {
+  return <Styled.Title>{children}</Styled.Title>;
+};
+
+Heading.propTypes = {
+  children: P.node.isRequired,
 };
