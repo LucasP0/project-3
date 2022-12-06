@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
   *{
     margin:0px;
     padding: 0px;
+    box-sizing: border-box;
   }
   html {
     font-size: 62.5%;
@@ -15,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
   }
-  h1 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
   }
 `;
